@@ -10,7 +10,7 @@
 7. [Best Practices](#best-practices)
 8. [Troubleshooting](#troubleshooting)
 
-## Introduction to Magento 2 Logging {#introduction}
+## Introduction to Magento 2 Logging
 
 Magento 2 uses the Monolog library for logging, which provides a flexible and powerful logging system. The framework supports multiple logging handlers that can write logs to different destinations: files, console output, email, databases, and more.
 
@@ -20,7 +20,7 @@ Magento 2 uses the Monolog library for logging, which provides a flexible and po
 - **Auditing**: Keep records of important system events
 - **Troubleshooting**: Diagnose problems in production environments
 
-## Understanding Magento 2 Logger Architecture {#architecture}
+## Understanding Magento 2 Logger Architecture 
 
 ### Core Components
 
@@ -40,7 +40,7 @@ Magento 2 supports standard PSR-3 log levels:
 - `INFO` (200): Informational messages
 - `DEBUG` (100): Debug-level messages
 
-## File Loggers {#file-loggers}
+## File Loggers 
 
 File logging is the most common type of logging in Magento 2. By default, logs are written to `var/log/` directory.
 
@@ -50,7 +50,7 @@ File logging is the most common type of logging in Magento 2. By default, logs a
 
 Create the module structure:
 ```
-app/code/YourCompany/YourModule/
+app/code/Traning/LoggerExample/
 ├── etc/
 │   ├── module.xml
 │   └── di.xml
