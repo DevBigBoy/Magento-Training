@@ -6,7 +6,9 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-    <event name="controller_action_predispatch">
-        <observer name="admin_example" instance="Training\ObserverExample\Observer\Adminhtml\Example" />
-    </event>
+    <!-- To Enable this Event unCommit it  -->
+
+<!--    <event name="controller_action_predispatch">-->
+<!--        <observer name="admin_example" instance="Training\ObserverExample\Observer\Adminhtml\Example" />-->
+<!--    </event>-->
 </config>
