@@ -73,3 +73,4 @@ atlassian*
 !/generated/.htaccess
 .DS_Store
 /app/code/MageMastery
+/app/code/SwiftOtter
