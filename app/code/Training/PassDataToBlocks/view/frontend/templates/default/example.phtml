@@ -1,0 +1,18 @@
+<?php /** @var \Training\PassDataToBlocks\Block\Example $block */ ?>
+
+<?php /** @var \Magento\Framework\Escaper $escaper */ ?>
+
+<div>
+    <h1>Data For Block Example</h1>
+</div>
+
+<ul>
+    <li><?= $block->getTopic() ?? 'Undefined M1' ?> </li>
+    <li><?= $block->getDescription() ?? 'Undefined M2' ?> </li>
+    <li><?= $block->getTutorialLink() ?? 'Undefined M3' ?> </li>
+    <li>
+        <a href="<?= $escaper->escapeUrl($block->getTutorialLink()) ?>">
+          <?= $escaper->escapeHtml(__('Magento 2 Training Method 3')) ?>
+        </a>
+    </li>
+</ul>
