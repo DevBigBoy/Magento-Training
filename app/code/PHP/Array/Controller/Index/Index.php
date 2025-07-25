@@ -58,13 +58,15 @@ class Index extends Action
             'closed'
         ];
 
-        // unset($_arr[0]);
+        // unset($_arr[0]); #Todo not re-index the array
         unset($_arr[50]);
 
-        //        array_shift($_arr); # re-index
+        //        array_shift($_arr); #Todo re-index the array
         //        array_pop($_arr);
 
-        dd($_arr);
+        //        dd($_arr);
+
+        # TODO: Casting the Array
         //        dd($this->simpleTypes->multiDimensionalArray());
     }
 
