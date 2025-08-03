@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Repository Interface Preference -->
+    <preference for="Training\ExtensionAttributesExample\Api\OrderPoNumberRepositoryInterface"
+                type="Training\ExtensionAttributesExample\Model\OrderPoNumberRepository"/>
+
+    <!-- Data Interface Preference -->
+    <preference for="Training\ExtensionAttributesExample\Api\Data\OrderPoNumberInterface"
+                type="Training\ExtensionAttributesExample\Model\OrderPoNumber"/>
+
+    <!-- Plugin for Order Repository - Handle Loading and Saving Orders -->
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="training_extension_attributes_order_repository"
+                type="Training\ExtensionAttributesExample\Plugin\OrderRepositoryPlugin"
+                sortOrder="10"
+                disabled="false"/>
+    </type>
+
+    <!-- Plugin for Quote Management - Handle Quote to Order Conversion -->
+    <type name="Magento\Quote\Model\QuoteManagement">
+        <plugin name="training_extension_attributes_quote_to_order"
+                type="Training\ExtensionAttributesExample\Plugin\QuoteToOrderPlugin"
+                sortOrder="10"
+                disabled="false"/>
+    </type>
+
+    <!-- Plugin for Cart Repository - Handle Quote/Cart Operations -->
+    <type name="Magento\Quote\Api\CartRepositoryInterface">
+        <plugin name="training_extension_attributes_cart_repository"
+                type="Training\ExtensionAttributesExample\Plugin\CartRepositoryPlugin"
+                sortOrder="10"
+                disabled="false"/>
+    </type>
+
+    <!-- Alternative: Observer for Order Save (can be used instead of or alongside plugins) -->
+    <!--
+    <type name="Magento\Framework\Event\Manager">
+        <plugin name="training_extension_attributes_order_save_observer"
+                type="Training\ExtensionAttributesExample\Observer\OrderSaveAfterObserver"
+                sortOrder="10"
+                disabled="true"/>
+    </type>
+    -->
+
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+
+    <!-- Extend the Sales Order Interface -->
+    <extension_attributes for="Magento\Sales\Api\Data\OrderInterface">
+        <!-- Add PO Number extension attribute -->
+        <attribute code="po_number" type="Training\ExtensionAttributesExample\Api\Data\OrderPoNumberInterface"/>
+    </extension_attributes>
+
+    <!-- Extend the Quote Interface (for checkout process) -->
+    <extension_attributes for="Magento\Quote\Api\Data\CartInterface">
+        <!-- Add PO Number extension attribute to quote/cart -->
+        <attribute code="po_number" type="string"/>
+    </extension_attributes>
+
+</config>
