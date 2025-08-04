@@ -7,9 +7,11 @@ declare(strict_types=1);
 
 namespace Training\ExtensionAttributesExample\Api;
 
-use Training\ExtensionAttributesExample\Api\Data\OrderPoNumberInterface;
+use Magento\Framework\Exception\CouldNotDeleteException;
+use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
+use Training\ExtensionAttributesExample\Api\Data\OrderPoNumberInterface;
 
 /**
  * Interface OrderPoNumberRepositoryInterface
@@ -22,7 +24,7 @@ interface OrderPoNumberRepositoryInterface
      *
      * @param OrderPoNumberInterface $orderPoNumber
      * @return OrderPoNumberInterface
-     * @throws LocalizedException
+     * @throws CouldNotSaveException|NoSuchEntityException
      */
     public function save(OrderPoNumberInterface $orderPoNumber): OrderPoNumberInterface;
 
@@ -49,7 +51,7 @@ interface OrderPoNumberRepositoryInterface
      *
      * @param OrderPoNumberInterface $orderPoNumber
      * @return bool
-     * @throws LocalizedException
+     * @throws CouldNotDeleteException
      */
     public function delete(OrderPoNumberInterface $orderPoNumber): bool;
 
@@ -59,7 +61,7 @@ interface OrderPoNumberRepositoryInterface
      * @param int $id
      * @return bool
      * @throws LocalizedException
-     * @throws NoSuchEntityException
+     * @throws CouldNotDeleteException
      */
     public function deleteById(int $id): bool;
 
@@ -68,7 +70,7 @@ interface OrderPoNumberRepositoryInterface
      *
      * @param int $orderId
      * @return bool
-     * @throws LocalizedException
+     * @throws CouldNotDeleteException
      */
     public function deleteByOrderId(int $orderId): bool;
 }

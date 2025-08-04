@@ -53,8 +53,6 @@ class OrderPoNumber extends AbstractModel implements OrderPoNumberInterface
         $this->_init(OrderPoNumberResource::class);
     }
 
-
-
     /**
      * Get Order ID
      *
@@ -73,7 +71,8 @@ class OrderPoNumber extends AbstractModel implements OrderPoNumberInterface
      */
     public function setOrderId(int $orderId): OrderPoNumberInterface
     {
-        return $this->setData(self::ORDER_ID, $orderId);
+        $this->setData(self::ORDER_ID, $orderId);
+        return $this;
     }
 
     /**
@@ -94,7 +93,8 @@ class OrderPoNumber extends AbstractModel implements OrderPoNumberInterface
      */
     public function setPoNumber(string $poNumber): OrderPoNumberInterface
     {
-        return $this->setData(self::PO_NUMBER, $poNumber);
+        $this->setData(self::PO_NUMBER, $poNumber);
+        return $this;
     }
 
     /**

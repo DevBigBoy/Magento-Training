@@ -7,10 +7,10 @@ declare(strict_types=1);
 
 namespace Training\ExtensionAttributesExample\Plugin;
 
-use Magento\Quote\Model\QuoteManagement;
 use Magento\Quote\Api\Data\CartInterface;
-use Magento\Sales\Api\Data\OrderInterface;
+use Magento\Quote\Model\QuoteManagement;
 use Magento\Sales\Api\Data\OrderExtensionFactory;
+use Magento\Sales\Api\Data\OrderInterface;
 use Psr\Log\LoggerInterface;
 
 /**

@@ -7,14 +7,14 @@ declare(strict_types=1);
 
 namespace Training\ExtensionAttributesExample\Plugin;
 
+use Magento\Framework\Exception\NoSuchEntityException;
+use Magento\Sales\Api\Data\OrderExtensionFactory;
 use Magento\Sales\Api\Data\OrderInterface;
 use Magento\Sales\Api\Data\OrderSearchResultInterface;
 use Magento\Sales\Api\OrderRepositoryInterface;
-use Magento\Sales\Api\Data\OrderExtensionFactory;
-use Training\ExtensionAttributesExample\Api\OrderPoNumberRepositoryInterface;
-use Training\ExtensionAttributesExample\Api\Data\OrderPoNumberInterfaceFactory;
-use Magento\Framework\Exception\NoSuchEntityException;
 use Psr\Log\LoggerInterface;
+use Training\ExtensionAttributesExample\Api\Data\OrderPoNumberInterfaceFactory;
+use Training\ExtensionAttributesExample\Api\OrderPoNumberRepositoryInterface;
 
 /**
  * Class OrderRepositoryPlugin

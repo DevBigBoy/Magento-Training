@@ -20,17 +20,17 @@ class OrderPoNumberRepository implements OrderPoNumberRepositoryInterface
     /**
      * @var OrderPoNumberResource
      */
-    private $resource;
+    private OrderPoNumberResource $resource;
 
     /**
      * @var OrderPoNumberInterfaceFactory
      */
-    private $orderPoNumberFactory;
+    private OrderPoNumberInterfaceFactory $orderPoNumberFactory;
 
     /**
      * @var array
      */
-    private $instances = [];
+    private array $instances = [];
 
     /**
      * OrderPoNumberRepository constructor.
