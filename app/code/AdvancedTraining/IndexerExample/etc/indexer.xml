@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <!-- id => Unique identifier used throughout Magento to reference this indexer -->
+
+    <!-- view_id => Links to the MView configuration (material view) that tracks data changes -->
+
+    <!--  Points to the PHP class that contains the actual indexing logic   -->
+
+    <indexer id="indexer_example_popular"
+             view_id="indexer_example_popular_order"
+             class="AdvancedTraining\IndexerExample\Model\Indexer\Popular">
+        <title translate="true">Popular Products</title>
+        <description translate="true">Sort products in a category by popularity</description>
+    </indexer>
+</config>
