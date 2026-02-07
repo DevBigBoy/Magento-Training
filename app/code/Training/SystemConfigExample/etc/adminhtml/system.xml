@@ -1,77 +1,23 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="training" translate="label" sortOrder="10">
-           <label>Training</label>
-       </tab>
-        <section id="training_example" type="text" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-            <class>separator-top</class>
-            <label>Training System Example</label>
-            <tab>training</tab>
-            <resource>Training_SystemConfigExample::config_training</resource>
-
-            <group id="system" type="text" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>System Configuration</label>
-
-                <field id="config1_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable Config1</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-
-                <field id="config1" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
-                    <label>Config 1</label>
-                    <comment>This Is Config 1 Comment.</comment>
-
-                    <depends>
-                        <field id="config1_enabled">1</field>
-                    </depends>
-                </field>
-
-                <field id="config2" translate="label" type="text" sortOrder="10" showInDefault="1" >
-                    <label>Config 2</label>
-                    <comment>This Is Config 2 Comment.</comment>
-                </field>
-
-                <field id="config3" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" >
-                    <label>Config 3</label>
-                    <comment>This Is Config 3 Comment.</comment>
-                </field>
+        <section id="payment">
+            <group id="custom" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Payments</label>
 
 
-                <field id="config4" translate="label" type="text" sortOrder="10" showInWebsite="1" >
-                    <label>Config 4</label>
-                    <comment>This Is Config 4 Comment.</comment>
-                </field>
-
-                <field id="config5" translate="label" type="text" sortOrder="10" showInStore="1" >
-                    <label>Config 5</label>
-                    <comment>This Is Config 5 Comment.</comment>
-                </field>
-            </group>
-
-
-            <group id="nested_group" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Nested Groups</label>
-
-                <group id="nested1" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Nested Group (One)</label>
-
-                    <field id="nested_config1" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1" >
-                        <label>Nested Config 1</label>
+                <group id="jackal" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>jackal Checkout</label>
+                    <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enabled</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>
-                </group>
-
-                <group id="nested2" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Nested Group (Two)</label>
-
-                    <field id="nested_config2" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1" >
-                        <label>Nested Config 2</label>
+                    <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Title</label>
+                    </field>
+                    <field id="description_type" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Description type</label>
+                        <source_model>TabbyPaymentDescriptionTypeI</source_model>
                     </field>
                 </group>
             </group>
